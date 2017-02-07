@@ -1,7 +1,8 @@
-.container {
-	max-width: 900px;
+p {
+	word-wrap: break-word;
 }
+ .title-logo {
+ 	padding-top: 20px;
+ }
 
-.title-logo {
-	margin-top: 20px;
-}
+
