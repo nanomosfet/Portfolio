@@ -14,17 +14,17 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 	<!-- Portfolio Specific Style Sheet -->
-    <link href="css/styles.css" rel="stylesheet">	
+    <link href="css/styles.css" rel="stylesheet">
 
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-xs-12">
-				<img src="http://placehold.it/100x100" class="img-responsive title-logo">
+			<div class="col-md-3 col-xs-6 title-logo">			
+				&#128506;
 			</div>
-			<div class="col-md-9 col-xs-12 text-right">
-				<h1>Timothy Searcy</h1>
+			<div class="col-md-9 col-xs-6 text-right">
+				<h1 id="PersonName">Timothy Searcy</h1>
 				<h4>Software Engineer</h4>
 			</div>
 		</div>
@@ -34,45 +34,82 @@
 			</div>
 		</div>
 		<div class="row ">
-			<div class="col-md-12 col-xs-12 ">
-				<img src="http://placehold.it/920x300" class="img-responsive center-block">
+			<div class="col-md-12 col-xs-12">
+				<!-- <img src="images/Electrical-optimized.svg" class="main-photo"> -->
+				<div class="main-photo"></div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-12 col-xs-12">
-				<h2> Featured Works </h2>
+				<h3 id="featuredWorks"> Featured Works </h3>
 			</div>
 		</div>
-		<div class="row text-center center-block">
-			<div class="col-md-4 col-xs-12">
-				<img src="http://placehold.it/300x300" class="img-responsive" data-toggle="modal" data-target="#testModal">
-				<h3>Movie Site</h3>
-				<p>https://github.com/nanomosfet/MovieCreator</p>
+		
+		<div class="row text-center">
+			<div class="tile col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+				
+				<div id="workIcon" data-toggle="modal" data-target="#MovieModal">&#127909;</div>	
+				<h4>Favorite Movie Site Creater</h4>
+				<a href="https://github.com/nanomosfet/MovieCreator">github.com/nanomosfet/MovieCreator</a>
 
 			</div>
-			<div class="col-md-4 col-xs-12">
-				<img src="http://placehold.it/300x300" class="img-responsive" data-toggle="modal" data-target="#testModal">
-				<h3>Movie Site</h3>
-				<p>https://github.com/nanomosfet/MovieCreator</p>
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tile">
+				<div id="workIcon" data-toggle="modal" data-target="#SurfModal">&#127754;</div>
+				<h4>Surf to Color LED</h4>
+				<a href="https://github.com/nanomosfet/Surf2Color">github.com/nanomosfet/Surf2Color</a>
 			</div>
-			<div class="col-md-4 col-xs-12">
-				<img src="http://placehold.it/300x300" class="img-responsive" data-toggle="modal" data-target="#testModal">
-				<h3>Movie Site</h3>
-				<p>https://github.com/nanomosfet/MovieCreator</p>
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tile">
+				<div id="workIcon" data-toggle="modal" data-target="#PlantModal">&#127794;</div>
+				<h4>Automated Plant Watering</h4>
+				<a href="https://github.com/nanomosfet/AutoWateringGarden">github.com/nanomosfet/AutoWateringGarden</a>
 			</div>
 		</div>
 	</div>
 
 <!-- Modal -->
-    <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="MovieModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
                 </div>
                 <div class="modal-body">
-                    <img class="img-responsive" src="http://placehold.it/200x300">
-                    This is an example text blah blah yeah we write things in here like it makes sense. 
+                    <div class="text-center" id="workIcon" data-toggle="modal" data-target="#testModal">&#127909;</div>	
+                    <p>This is a Python program that lets you easily create your own favorite movie website that shows information and trailers of the movies</p> 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="SurfModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center" id="workIcon" data-toggle="modal" data-target="#testModal">&#127754;</div>
+                    <p>This is a Python program that is used on the rasberry pi to change a LED's color depending on the surf conditions of your local beach.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="PlantModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center" id="workIcon" data-toggle="modal" data-target="#testModal">&#127794;</div>
+                    <p>This is an Arduino project that lets you automatically water your plants.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

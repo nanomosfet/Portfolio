@@ -2,7 +2,71 @@ p {
 	word-wrap: break-word;
 }
  .title-logo {
- 	padding-top: 20px;
+ 	padding-top: 0px;
+ 	font-size:100px;
+ 	text-shadow: 1px 1px 4px green; 
  }
 
+ .main-photo {
+	height:100px;
+	/*background-image: url("../images/Electrical.svg");*/
+	/*background-position: center center;
+	background-size: cover;*/
+	background:
+	linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+	linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+	linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+	background-color:#e1ebbd;
+	background-size: 128px 128px;
+	
+}
+ 
+@media screen and (min-width: 920px) {
+	 .container {
+	 	width: 920px;
+	 	margin-left: auto;
+	 	margin-right: auto;
+	 	
+	 }
+	
+
+}
+
+@media screen and (max-width: 650px) {
+ 	#PersonName {
+ 		font-size: 20px;
+ 		font-weight: bold;
+	}
+
+ 	#featuredWorks {
+ 		font-size: 16px;
+ 		font-weight: bold;
+ 	}
+	h3 {
+		font-size:14px;
+		font-weight: bold;
+	}
+	.main-photo {
+		height:120px;
+	}
+
+
+}
+
+
+
+hr {
+	border-top: 5px solid green
+}
+
+@media screen and (min-width: 750px) {
+ 	
+	}
+
+
+
+
+#workIcon {
+	font-size:75px;
+}
 
