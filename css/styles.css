@@ -11,7 +11,7 @@ hr {
  	text-shadow: 1px 1px 4px green; 
  }
  .main-photo {
-	height:100px;
+	height:50px;
 	/* Credit to http://lea.verou.me/css3patterns/ */
 	background:
 	linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
@@ -20,13 +20,23 @@ hr {
 	background-color:#e1ebbd;
 	background-size: 128px 128px;	
 }
+
+.icon-image{
+	height: 75px;
+	width:76px;
+}
+.tile-image{
+	height: 125px;
+	width: 125px;
+}
+
 #workIcon {
 	font-size:75px;
 }
 /* Media Queries */
 @media screen and (min-width: 750px) {
  	.main-photo {
-		height:200px;
+		height:75px;
 	}
 }
 @media screen and (max-width: 650px) {
@@ -50,4 +60,92 @@ hr {
 	 	margin-left: auto;
 	 	margin-right: auto;	 	
 	 }
+}
+
+/*
+ *
+ * Top Level Navigation
+ *
+ */
+
+.nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 24px;
+  padding: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #616161;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #212121;
+}
+a {
+  padding:1.5em;
+}
+
+#menu {
+  position:fixed;
+  top:75px;
+  right:5px;
+  z-index: 2;
+  font-size: small;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  .nav {
+    width: 300px;
+    height:100%;
+    z-index: 1;
+    position: fixed;
+    -webkit-transform: translate(-326px,0);
+    transform: translate(-326px,0);
+    transition: transform 0.3s ease;
+    background-color: white;
+    top:0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  nav.open {
+    -webkit-transform: translate(-26px,0);
+    transform: translate(-26px,0);
+  }
+  .nav__list {
+    width:300px;
+  }
+  .nav__item {
+    width:75px;
+    display:block;
+    border:1px;
+    border-radius: 25px;
+  } 
+  
+}
+
+@media screen and (min-width: 500px) {
+	#menu {
+		display:none;
+	}
 }
