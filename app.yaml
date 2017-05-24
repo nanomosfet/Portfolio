@@ -15,6 +15,12 @@ handlers:
 - url: /images
   static_dir: images
 
+- url: /data
+  script: main.app
+
+- url: /chartist
+  static_dir: bower_components/chartist/dist
+
 - url: /.*
   script: main.app
 

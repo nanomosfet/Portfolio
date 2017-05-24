@@ -10,6 +10,14 @@ hr {
  	font-size:100px;
  	text-shadow: 1px 1px 4px green; 
  }
+
+.graham-logo {
+  height: 120px;
+  width:120px;
+  background: linear-gradient(to bottom left, #000000, #0a0a0a);
+  border-radius: 60px;
+}
+
  .main-photo {
 	height:50px;
 	/* Credit to http://lea.verou.me/css3patterns/ */
@@ -19,6 +27,11 @@ hr {
 	linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
 	background-color:#e1ebbd;
 	background-size: 128px 128px;	
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header {
+  border-bottom: thin groove #fff;
 }
 
 .icon-image{
@@ -32,6 +45,12 @@ hr {
 
 #workIcon {
 	font-size:75px;
+}
+
+.bio-image {
+  max-height: 450px;
+  padding-bottom: 10px;
+
 }
 /* Media Queries */
 @media screen and (min-width: 750px) {
@@ -62,6 +81,40 @@ hr {
 	 }
 }
 
+/*Forms*/
+input[type=text], input[type=password], textarea, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+  min-height: 300px;
+}
+
+input[type=submit], .button {
+    width: 100%;
+    background-color: #008CBA;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #808CBA;
+}
+
+label {
+  display: block;
+}
+
 /*
  *
  * Top Level Navigation
@@ -72,11 +125,11 @@ hr {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .nav__list {
   width: 100%;
+  display: inline-flex;
   padding: 0;
   margin: 0;
 }
@@ -84,27 +137,46 @@ hr {
 .nav__item {
   box-sizing: border-box;
   display: inline-block;
-  width: 24%;
+  width: 50%;
   text-align: center;
   line-height: 24px;
-  padding: 24px;
-  text-transform: uppercase;
+  padding: 0px;
 }
 
+.nav__item:hover {
+  background-color: #3f3f3f;
+  /*border-radius: 2px;*/
+}
+.nav__item:hover a {
+  color: #ffffff;
+}
 .nav a {
   text-decoration: none;
-  color: #616161;
+  color: black;
+  display: block;
+  padding: 5px;
+  width: 100%;
+}
+
+.active {
+  background-color: #000;
+ /* border-radius: 2px;*/
+}
+
+.active a {
+  color: #fff;
+  text-decoration: underline;
 }
 
 .nav a:hover {
   text-decoration: underline;
-  color: #212121;
+  
 }
 a {
   padding:1.5em;
 }
 
-#menu {
+/*#menu {
   position:fixed;
   top:75px;
   right:5px;
@@ -113,6 +185,19 @@ a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: white;
   border-radius: 25px;
+}*/
+
+#menu {
+  position:fixed;
+  top:115px;
+  right:5px;
+  z-index: 2;
+  font-size: medium;
+  font-weight: bold;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  border-radius: 25px;
+  padding: 0.50em;
 }
 
 @media screen and (max-width: 500px) {
@@ -128,18 +213,22 @@ a {
     top:0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+  .nav a {
+    padding: 25px;
+  }
   nav.open {
     -webkit-transform: translate(-26px,0);
     transform: translate(-26px,0);
   }
   .nav__list {
     width:300px;
+    display: block;
   }
   .nav__item {
-    width:75px;
+    width:100%;
     display:block;
     border:1px;
-    border-radius: 25px;
+    padding: 0px;
   } 
   
 }

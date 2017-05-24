@@ -12,43 +12,31 @@
 	<!-- Portfolio Specific Style Sheet -->
     <link href="css/styles.css" rel="stylesheet">
 </head>
-<body>	
+<body>
 	<div class="container">
-		<header>
+		<header id="header" class="header">
 			<div class="row">
-				<div class="col-md-3 col-xs-6 title-logo">			
+				<div class="col-md-3 col-xs-6 title-logo">
 					<!-- &#128506; -->
 					<img src="images/earth.svg" class="icon-image">
 				</div>
-				<div class="col-md-9 col-xs-6 text-right">					
+				<div class="col-md-9 col-xs-6 text-right">
 					<h1 id="PersonName">Timothy Searcy</h1>
-					<h4>Software Engineer</h4>
+					<h4>Web Developer</h4>
 					<a id="menu">
            				 &#9776;
           			</a>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-12 col-xs-12">
-					<hr>
-				</div>
-			</div>
-			
-			<div class="row ">
-				<div class="col-md-12 col-xs-12">				
-					<div class="main-photo"></div>
-				</div>
-			</div>
 			<nav id="drawer" class="nav">
 		      <ul class="nav__list">
-		        <li class="nav__item"><a href="#">Home</a></li>
-		        <li class="nav__item"><a href="#">Bio</a></li>
-		        <li class="nav__item"><a href="#">Works</a></li>
-		        <li class="nav__item"><a href="#">Blog</a></li>
+		        <li id="home-link" class="nav__item active"><a href="#">Home</a></li>
+		        <li id="bio-link"class="nav__item"><a href="#">Bio</a></li>
+		        <li id="contact-link"class="nav__item"><a href="#">Contact</a></li>
 		      </ul>
     		</nav>
 		</header>
-		<section class="main-content">
+		<section id="home-content" class="main-content">
 			<section class="main-content-header">
 				<div class="row">
 					<div class="col-md-12 col-xs-12">
@@ -56,20 +44,20 @@
 					</div>
 				</div>
 			</section>
-			<section class="content">
+			<section  class="content">
 				<div class="row text-center">
 					<article>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tile">
-							<div id="workIcon" data-toggle="modal" data-target="#MovieModal"><img src="images/movie.svg" class="tile-image"></div>	
-							<h4>Favorite Movie Site Creater</h4>
-							<a href="https://github.com/nanomosfet/MovieCreator">github.com/nanomosfet/MovieCreator</a>
+							<div id="workIcon"><img src="images/blog.png" class="tile-image"></div>
+							<h4>Multi-User Blog</h4>
+							<a target="_blank" href="https://turing-outrider-161118.appspot.com/">Blog Example</a>
 						</div>
 					</article>
 					<article>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 tile">
-							<div id="workIcon" data-toggle="modal" data-target="#SurfModal"><img src="images/wave.svg" class="tile-image"></div>
-							<h4>Surf to Color LED</h4>
-							<a href="https://github.com/nanomosfet/Surf2Color">github.com/nanomosfet/Surf2Color</a>
+							<div id="workIcon"><img src="images/graham_logo.png" class="graham-logo"></div>
+							<h4>Music Artist Portfolio</h4>
+							<a target="_blank" href="https://gawtbass-website.appspot.com/">GAWTBASS Music Portfolio</a>
 						</div>
 					</article>
 					<article>
@@ -83,43 +71,55 @@
 			</section>
 
 		</section><!-- End Main Content -->
+		<section id="bio-content" class="main-content">
+			<section class="main-content-header">
+				<div class="row">
+					<div class="col-md-12 col-xs-12">
+						<h3 id="featuredWorks">Biography</h3>
+					</div>
+				</div>
+			</section>
+			<section class="content">
+				<div class="row">
+					<div class="col-sm-6">
+						<img class="img-responsive bio-image" src="/images/bio.jpg">
+					</div>
+					<div class="col-sm-6">
+					<p>I am a web developer who knows Python, Jinja2, HTML5, CSS3, Google App Engine, Google Datastore, PostgreSQL, Javascript and jQuery.</p>
+					<p>I have received a B.S. Degree from University of California San Diego in Electrical Engineering.</p>
+					<p>My hobbies include surfing, rock climbing, traveling</p>
+
+					</div>
+				</div>
+			</section>
+		</section>
+		<!-- End Bio Content -->
+		<section id="contact-content">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3>Want to contact me?</h3>
+					<form method="post" action="/email_form">
+					    <label>
+					        <h4>Name:</h4>
+					        <input type="text" name="name">
+					    </label>
+					    <label>
+					        <h4>Email:</h4>
+					        <input type="text" name="email">
+					    </label>
+					    <label>
+					        <h4>Details:</h4>
+					        <textarea name="request"></textarea>
+					    </label>
+						<input type="submit">
+					</form>
+					<div class="error"></div>
+				</div>
+			</div>
+		</section>
+		<!-- End Contact section -->
 	</div>
-	<section class="modals">
-		<!-- Movie Modal -->
-	    <div class="modal fade" id="MovieModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	        <div class="modal-dialog">
-	            <div class="modal-content">
-	                <div class="modal-header">
-	                    <h4 class="modal-title" id="myModalLabel">Favorite Movie Site Creater</h4>
-	                </div>
-	                <div class="modal-body">
-	                    <div class="text-center" id="workIcon" data-toggle="modal" data-target="#testModal"><img src="images/movie.svg" class="tile-image"></div>	
-	                    <p>This is a Python program that lets you easily create your own favorite movie website that shows information and trailers of the movies</p>
-	                    <a href="/moviesite">Link to the example page</a> 
-	                </div>
-	                <div class="modal-footer">
-	                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	    <!-- Surf Modal -->
-	    <div class="modal fade" id="SurfModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	        <div class="modal-dialog">
-	            <div class="modal-content">
-	                <div class="modal-header">
-	                    <h4 class="modal-title" id="myModalLabel">Surf to Color LED</h4>
-	                </div>
-	                <div class="modal-body">
-	                    <div class="text-center" id="workIcon" data-toggle="modal" data-target="#testModal"><img src="images/wave.svg" class="tile-image"></div>
-	                    <p>This is a Python program that is used on the rasberry pi to change a LED's color depending on the surf conditions of your local beach.</p>
-	                </div>
-	                <div class="modal-footer">
-	                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
+	<section class="modals">	   
 	    <!-- Plant Modal -->
 	    <div class="modal fade" id="PlantModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	        <div class="modal-dialog">
@@ -139,30 +139,52 @@
 	    </div>
 	</section>
 	<script>
-      var menu = document.querySelector('#menu');
-      var drawer = document.querySelector('#drawer');
-      var toggle_on = 0;
-      if(!toggle_on) {
-        menu.addEventListener('click', function(e) { 
-          drawer.classList.toggle('open');
-          e.stopPropagation();
-        });
-      }
+   	var menu = document.querySelector('#menu');
+	var drawer = document.querySelector('#drawer');
+	var toggle_on = 0;
+	if(!toggle_on) {
+		menu.addEventListener('click', function(e) {
+	  		drawer.classList.toggle('open');
+	 		 e.stopPropagation();
+		});
+	}
 
-      if(toggle_on) {
-        menu.addEventListener('click', function(e) {
-          drawer.classList.remove('open');
-        });
-      }
+	if(toggle_on) {
+		menu.addEventListener('click', function(e) {
+	   		drawer.classList.remove('open');
+		});
+	}
 
-      menu.addEventListener('drag',function(event){
-        menu.style.right = "";
-        menu.style.top = "";
-        draggable.style.top = String(event.screenY) + "px";
-        draggable.style.left = String(event.screenX) + "px";
-        console.log(event.clientY)
-        console.log(event.clientX)
+    document.getElementById("bio-content").style.display = "none";
+    document.getElementById("contact-content").style.display = "none";
+    document.getElementById("home-link").addEventListener('click', function(e) {
+        drawer.classList.remove('open');
       });
+      document.getElementById("bio-link").addEventListener('click', function(e) {
+        drawer.classList.remove('open');
+      });
+
+    $(document).ready(function() {
+    	$(".nav__item").click(function(e) {
+    		$(this).addClass("active").siblings().removeClass("active");   			
+    	});
+    	$("#bio-link").click(function(e) {
+    		e.preventDefault();
+    		$("#bio-content").fadeIn("slow").siblings().not("#header").hide();
+
+    	});
+    	$("#home-link").click(function(e) {
+    		e.preventDefault();
+    		$("#home-content").fadeIn("slow").siblings().not("#header").hide();
+    	});
+    	$("#contact-link").click(function(e) {
+    		e.preventDefault();
+    		e.preventDefault();
+    		$("#drawer").removeClass("open");
+    		$("#contact-content").fadeIn("slow").siblings().not("#header").hide();
+    	});
+	});
+	
 
     </script>
 </body>
