@@ -54,12 +54,13 @@ class contactHandler(Handler):
         name = self.request.get('name')
         email = self.request.get('email')
         request = self.request.get('request')
+        phone_number = self.request.get('phone-number')
         
         mail.send_mail(
             sender='TimPortfolioSite@timsearcyportfolio.appspotmail.com',
             to='Tim Searcy <timmyzsearcy@gmail.com>',
             subject='%s is contacting you.' % name,
-            body='Request email: %s \nRequest Body: \n%s' % (email, request))
+            body='Request email: %s\n Phone number: %s \nRequest Body: \n%s' % (email,phone_number, request))
         
         self.write("Your email has been received!")
 
